@@ -1,0 +1,17 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#8592; Retour</a>
+</div>
+
+<div class="card-body">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}} <!-- Ceci permet d'appeler et implementer la structure du formulaire desfini dans le models.py  -->
+        <input class="button" type="submit" value="Enregistrer">
+    </form>
+</div>
+
+
+{% endblock content %}
